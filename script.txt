@@ -1,0 +1,15 @@
+sudo apt update && sudo apt upgrade -y
+sudo apt install git build-essential cmake libuv1-dev libssl-dev libhwloc-dev -y
+wget http://ftp.gnu.org/gnu/libc/glibc-2.36.tar.gz
+tar -xzf glibc-2.36.tar.gz
+cd glibc-2.36
+mkdir build
+cd build
+../configure --prefix=/opt/glibc-2.36
+glibc-source
+reboot
+curl -L -O https://github.com/xmrig/xmrig/releases/download/v6.22.0/xmrig-6.22.0-noble-x64.tar.gz
+tar -xf xmrig-6.22.0-noble-x64.tar.gz
+./xmrig -o xmr-us-west1.nanopool.org:10300 -u 8AqAmdLK6W1NuVNHSRdczihcWhqWWm3S7XPErVHu1YA35yBzfPV4dBEPCJqUkL27kbHWDipnNqHDY7ohLdZZQATqV7yZshu -k --coin monero -a rx/0
+
+8AqAmdLK6W1NuVNHSRdczihcWhqWWm3S7XPErVHu1YA35yBzfPV4dBEPCJqUkL27kbHWDipnNqHDY7ohLdZZQATqV7yZshu
